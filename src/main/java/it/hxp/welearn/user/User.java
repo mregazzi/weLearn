@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    private List<Course> courses = new ArrayList<Course>();
-    private List<User> friends = new ArrayList<User>();
+    private List<Course> courses = new ArrayList<>();
+    private List<User> friends = new ArrayList<>();
 
     public List<User> getFriends() {
         return friends;
@@ -17,7 +17,7 @@ public class User {
         friends.add(user);
     }
 
-    public void addTrip(Course course) {
+    public void addCourse(Course course) {
         courses.add(course);
     }
 
