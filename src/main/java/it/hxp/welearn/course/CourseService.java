@@ -1,5 +1,5 @@
-import it.hxp.welearn.course.Course;
-import it.hxp.welearn.course.CourseDAO;
+package it.hxp.welearn.course;
+
 import it.hxp.welearn.exception.UserNotLoggedInException;
 import it.hxp.welearn.user.User;
 import it.hxp.welearn.user.UserSession;
@@ -7,9 +7,10 @@ import it.hxp.welearn.user.UserSession;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class CourseService {
     public List<Course> getCoursesByUser(User user) throws UserNotLoggedInException {
-        List<Course> courseList = new ArrayList<Course>();
+        List<Course> courseList = new ArrayList<>();
         User loggedUser = UserSession.getInstance().getLoggedUser();
         boolean isFriend = false;
         if (loggedUser != null) {
